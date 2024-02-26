@@ -4,84 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tievex.XYZ</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a; /* Dark background color */
-            color: #fff; /* Text color */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased background shadow */
-            position: relative;
-        }
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1a1a1a; /* Dark background color */
+        color: #fff; /* Text color */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased background shadow */
+        position: relative;
+    }
 
-        .container {
-            background-color: #333; /* Darker container background color */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-        }
+    .container {
+        background-color: #333; /* Darker container background color */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+    }
 
-        h1 {
-            color: #c4302b; /* Glow color for the title */
-            text-shadow: 0 0 10px #c4302b; /* Text shadow for the glow effect */
-        }
+    h1 {
+        color: #c4302b; /* Glow color for the title */
+        text-shadow: 0 0 10px #c4302b; /* Text shadow for the glow effect */
+        animation: glow 2s infinite alternate; /* Animation for the glowing effect */
+    }
 
-        p {
-            color: #fff; /* Text color */
-            line-height: 1.6;
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 10px #c4302b;
         }
+        to {
+            text-shadow: 0 0 20px #c4302b;
+        }
+    }
 
-        .button-container {
-            margin-top: 20px;
-            display: flex;
-            justify-content: space-around;
-        }
+    p {
+        color: #fff; /* Text color */
+        line-height: 1.6;
+    }
 
-        .button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            color: #fff;
-            font-size: 14px;
-            transition: background-color 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .button-container {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
 
-        .youtube-button {
-            background-color: #c4302b;
-        }
+    .button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
+        transition: background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-        .twitter-button {
-            background-color: #1da1f2;
-        }
+    .youtube-button {
+        background-color: #c4302b;
+        background-image: url('youtube.png');
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        background-size: 20px;
+        padding-left: 40px; /* Increase padding to make room for the icon */
+    }
 
-        .discord-button {
-            background-color: #7289da;
-        }
+    .twitter-button {
+        background-color: #1da1f2;
+        background-image: url('twitter.png');
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        background-size: 20px;
+        padding-left: 40px; /* Increase padding to make room for the icon */
+    }
 
-        .mute-button {
-            background-color: #333;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-        }
+    .discord-button {
+        background-color: #7289da;
+        background-image: url('discord.png');
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        background-size: 20px;
+        padding-left: 40px; /* Increase padding to make room for the icon */
+    }
 
-        /* FontAwesome Icons */
-        .fa {
-            margin-right: 5px;
-        }
-    </style>
+    /* FontAwesome Icons */
+    .fa {
+        margin-right: 5px;
+    }
+</style>
+
     <!-- Include FontAwesome library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-R7wRZOqRX8EBFU2jtjMAyL0SY8XGcDX1GVSPD5egBGo=" crossorigin="anonymous" />
 </head>
