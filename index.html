@@ -77,7 +77,7 @@
     <!-- Include FontAwesome library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-R7wRZOqRX8EBFU2jtjMAyL0SY8XGcDX1GVSPD5egBGo=" crossorigin="anonymous" />
 </head>
-<body>
+<body onclick="playAudio()">
     <div class="container">
         <h1>Tievex.XYZ</h1>
         <p>
@@ -93,6 +93,12 @@
     </div>
 
     <script>
+        function playAudio() {
+            const audio = new Audio('ggget.mp3');
+            audio.volume = 0.2; // 20% volume
+            audio.play();
+        }
+
         function CopyDiscordId() {
             const discordId = "@tievex";
             navigator.clipboard.writeText(discordId);
