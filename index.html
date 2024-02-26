@@ -56,18 +56,24 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-size: 20px; /* Adjust the size of the background image */
+            background-repeat: no-repeat;
+            background-position: 5px 50%; /* Adjust the position of the background image */
         }
 
         .youtube-button {
             background-color: #c4302b;
+            background-image: url('youtube.png'); /* Add the YouTube image */
         }
 
         .twitter-button {
             background-color: #1da1f2;
+            background-image: url('twitter.png'); /* Add the Twitter image */
         }
 
         .discord-button {
             background-color: #7289da;
+            background-image: url('discord.png'); /* Add the Discord image */
         }
 
         .mute-button {
@@ -94,9 +100,9 @@
         </p>
 
         <div class="button-container">
-            <a class="button youtube-button" href="https://www.youtube.com/@tievex" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-            <a class="button twitter-button" href="https://twitter.com/@ciralt420" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
-            <button class="button discord-button" onclick="CopyDiscordId()"><i class="fab fa-discord"></i> Discord</button>
+            <a class="button youtube-button" href="https://www.youtube.com/@tievex" target="_blank">YouTube</a>
+            <a class="button twitter-button" href="https://twitter.com/@ciralt420" target="_blank">Twitter</a>
+            <button class="button discord-button" onclick="CopyDiscordId()">Discord</button>
         </div>
     </div>
 
@@ -126,21 +132,4 @@
 
         function toggleMute() {
             if (audio) {
-                audioMuted = !audioMuted;
-                if (audioMuted) {
-                    audio.volume = 0;
-                } else {
-                    audio.volume = 0.2;
-                }
-
-                const muteButton = document.querySelector('.mute-button');
-                if (audioMuted) {
-                    muteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute Song';
-                } else {
-                    muteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute Song';
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+                audio
