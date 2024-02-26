@@ -1,0 +1,25 @@
+/* styles.css */
+
+.youtube-button {
+    background-color: #c4302b;
+    background-image: url('youtube.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+}
+
+.twitter-button {
+    background-color: #1da1f2;
+    background-image: url('twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+}
+
+.discord-button {
+    background-color: #7289da;
+    background-image: url('discord.png');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+}
