@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tievex.XYZ - The PotPvP Legend</title>
+    <title>Tievex.XYZ</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,6 +15,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased background shadow */
         }
 
         .container {
@@ -51,6 +52,9 @@
             color: #fff;
             font-size: 14px;
             transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .youtube-button {
@@ -64,7 +68,18 @@
         .discord-button {
             background-color: #7289da;
         }
+
+        .copy-button {
+            background-color: #333;
+        }
+
+        /* FontAwesome Icons */
+        .fa {
+            margin-right: 5px;
+        }
     </style>
+    <!-- Include FontAwesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha256-R7wRZOqRX8EBFU2jtjMAyL0SY8XGcDX1GVSPD5egBGo=" crossorigin="anonymous" />
 </head>
 <body>
     <div class="container">
@@ -75,15 +90,22 @@
         </p>
 
         <div class="button-container">
-            <a class="button youtube-button" href="https://www.youtube.com/@tievex" target="_blank">YouTube</a>
-            <a class="button twitter-button" href="https://twitter.com/@ciralt420" target="_blank">Twitter</a>
-            <button class="button discord-button" onclick="DiscordId()">Discord</button>
+            <a class="button youtube-button" href="https://www.youtube.com/@tievex" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            <a class="button twitter-button" href="https://twitter.com/@ciralt420" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <button class="button discord-button" onclick="DiscordId()"><i class="fab fa-discord"></i> Discord</button>
+            <button class="button copy-button" onclick="CopyDiscordId()"><i class="far fa-copy"></i> Copy Discord ID</button>
         </div>
     </div>
 
     <script>
         function DiscordId() {
-            alert("Discord ID: @tievex"); 
+            alert("Discord ID: @tievex");
+        }
+
+        function CopyDiscordId() {
+            const discordId = "@tievex";
+            navigator.clipboard.writeText(discordId);
+            alert("Discord ID copied to clipboard: " + discordId);
         }
     </script>
 </body>
