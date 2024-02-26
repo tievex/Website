@@ -4,22 +4,25 @@
     background-color: #c4302b;
     background-image: url('youtube.png');
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 20px center;
     background-size: 20px;
+    padding-left: 40px; /* Increase padding to make room for the icon */
 }
 
 .twitter-button {
     background-color: #1da1f2;
     background-image: url('twitter.png');
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 20px center;
     background-size: 20px;
+    padding-left: 40px; /* Increase padding to make room for the icon */
 }
 
 .discord-button {
     background-color: #7289da;
     background-image: url('discord.png');
     background-repeat: no-repeat;
-    background-position: 10px center;
+    background-position: 20px center;
     background-size: 20px;
+    padding-left: 40px; /* Increase padding to make room for the icon */
 }
