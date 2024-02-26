@@ -16,6 +16,7 @@
             justify-content: center;
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Increased background shadow */
+            position: relative;
         }
 
         .container {
@@ -69,6 +70,13 @@
             background-color: #7289da;
         }
 
+        .mute-button {
+            background-color: #333;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+
         /* FontAwesome Icons */
         .fa {
             margin-right: 5px;
@@ -92,11 +100,16 @@
         </div>
     </div>
 
+    <button class="button mute-button" onclick="toggleMute()">
+        <i class="fas fa-volume-mute"></i> Mute
+    </button>
+
     <script>
         let audioPlayed = false;
+        let audioMuted = false;
 
         function playAudio() {
-            if (!audioPlayed) {
+            if (!audioPlayed && !audioMuted) {
                 const audio = new Audio('ggget.mp3');
                 audio.volume = 0.2; // 20% volume
                 audio.play();
@@ -108,6 +121,16 @@
             const discordId = "@tievex";
             navigator.clipboard.writeText(discordId);
             alert("Discord ID copied to clipboard: " + discordId);
+        }
+
+        function toggleMute() {
+            audioMuted = !audioMuted;
+            const muteButton = document.querySelector('.mute-button');
+            if (audioMuted) {
+                muteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute';
+            } else {
+                muteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute';
+            }
         }
     </script>
 </body>
