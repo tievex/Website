@@ -101,16 +101,17 @@
     </div>
 
     <button class="button mute-button" onclick="toggleMute()">
-        <i class="fas fa-volume-mute"></i> Mute
+        <i class="fas fa-volume-mute"></i> Mute Song
     </button>
 
     <script>
+        let audio;
         let audioPlayed = false;
         let audioMuted = false;
 
         function playAudio() {
             if (!audioPlayed && !audioMuted) {
-                const audio = new Audio('ggget.mp3');
+                audio = new Audio('ggget.mp3');
                 audio.volume = 0.2; // 20% volume
                 audio.play();
                 audioPlayed = true;
@@ -124,12 +125,20 @@
         }
 
         function toggleMute() {
-            audioMuted = !audioMuted;
-            const muteButton = document.querySelector('.mute-button');
-            if (audioMuted) {
-                muteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute';
-            } else {
-                muteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute';
+            if (audio) {
+                audioMuted = !audioMuted;
+                if (audioMuted) {
+                    audio.volume = 0;
+                } else {
+                    audio.volume = 0.2;
+                }
+
+                const muteButton = document.querySelector('.mute-button');
+                if (audioMuted) {
+                    muteButton.innerHTML = '<i class="fas fa-volume-up"></i> Unmute Song';
+                } else {
+                    muteButton.innerHTML = '<i class="fas fa-volume-mute"></i> Mute Song';
+                }
             }
         }
     </script>
