@@ -93,10 +93,15 @@
     </div>
 
     <script>
+        let audioPlayed = false;
+
         function playAudio() {
-            const audio = new Audio('ggget.mp3');
-            audio.volume = 0.2; // 20% volume
-            audio.play();
+            if (!audioPlayed) {
+                const audio = new Audio('ggget.mp3');
+                audio.volume = 0.2; // 20% volume
+                audio.play();
+                audioPlayed = true;
+            }
         }
 
         function CopyDiscordId() {
